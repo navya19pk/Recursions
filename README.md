@@ -42,3 +42,19 @@ Algorithm:
 - Step-6: Call printReverse(str, index - 1) recursively to print the previous character
 - Step-7: Call printReverse(str, str.length() - 1) to start printing from the last character
 - Step-8: End.
+
+#Program d: This C++ program reverses a positive integer using recursion. The core logic is implemented in the function reverseNumber, which takes two arguments: the number n to be reversed, and an accumulator rev (defaulted to 0) that builds the reversed number step by step. In each recursive call, the last digit of n (n % 10) is added to rev after shifting rev left by one decimal place (rev * 10). The number n is then reduced by removing the last digit (n / 10), and the function continues until n becomes 0. This is the base case where the function returns the fully reversed number. The main function handles user input, checks for negative values, and prints the final reversed number. This recursive approach is efficient for reversing integers and avoids using string conversions or loops.
+
+Algorithm:
+
+- Step-1: Start
+- Step-2: Read the integer n from the user
+- Step-3: Check if n is negative: If yes, display a message and stop
+- Step-4: Define a recursive function reverseNumber(n, rev):
+- Step-5: If n == 0, return rev (base case)
+- Step-6: Else: Extract last digit: digit = n % 10
+- Step-7: Update rev = rev * 10 + digit
+- Step-8: Call reverseNumber(n / 10, rev)
+- Step-9: Call the function reverseNumber(n, 0) from main and store the result
+- Step-10: Display the reversed number
+- Step-11: End.
